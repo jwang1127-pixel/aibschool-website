@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh-Hans"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About AI B School — 美国创新商学院</title><meta name="description" content="了解 AI B School 的使命、定位、工作方式与长期方向。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#21372F;
+  --ink-deep:#182a24;
+  --gold:#A8862E;
+  --gold-soft:#c2a45a;
+  --paper:#F2ECDD;
+  --paper-warm:#EAE2CE;
+  --paper-line:#d8cfb8;
+  --text-on-paper:#2b3a33;
+  --text-soft:#5c6a62;
+  --serif-cn:'Noto Serif SC', serif;
+  --serif-en:'Cormorant Garamond', serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--serif-cn);
+  background:var(--paper);
+  color:var(--text-on-paper);
+  line-height:1.9;
+  font-size:17px;
+  -webkit-font-smoothing:antialiased;
+}
+.en{font-family:var(--serif-en)}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+
+/* ---------- nav ---------- */
+nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(242,236,221,.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--paper-line);
+}
+.nav-inner{
+  max-width:1080px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 24px;
+}
+.brand{display:flex;align-items:baseline;gap:10px}
+.brand .mark{
+  font-family:var(--serif-en);
+  font-size:20px;font-weight:600;letter-spacing:.06em;
+  color:var(--ink);
+}
+.brand .mark span{color:var(--gold)}
+.brand .cn{font-size:13px;letter-spacing:.24em;color:var(--text-soft)}
+.nav-links{display:flex;gap:28px;font-size:14px;letter-spacing:.1em}
+.nav-links a{color:var(--text-soft);transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
+@media(max-width:720px){.nav-links{display:none}}
+
+/* ---------- hero ---------- */
+.hero{
+  background:var(--ink);
+  color:var(--paper);
+  overflow:hidden;
+  position:relative;
+}
+.hero-inner{
+  max-width:1080px;margin:0 auto;
+  padding:96px 24px 0;
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:48px;
+  align-items:end;
+}
+.hero .eyebrow{
+  font-size:13px;letter-spacing:.42em;
+  color:var(--gold-soft);
+  margin-bottom:28px;
+}
+.hero h1{
+  font-size:clamp(34px,4.6vw,54px);
+  font-weight:600;
+  line-height:1.42;
+  letter-spacing:.02em;
+  color:var(--paper);
+}
+.hero h1 .gold{color:var(--gold-soft)}
+.hero .sub{
+  margin-top:26px;
+  font-size:17px;
+  color:rgba(242,236,221,.72);
+  max-width:34em;
+}
+.hero .sub .en{font-size:15px;letter-spacing:.04em;font-style:italic;color:rgba(242,236,221,.5)}
+.hero-cta{
+  margin:40px 0 72px;
+  display:flex;gap:18px;flex-wrap:wrap;
+}
+.btn{
+  display:inline-block;
+  padding:13px 34px;
+  font-size:15px;letter-spacing:.18em;
+  border:1px solid var(--gold);
+  transition:all .25s;
+}
+.btn-solid{background:var(--gold);color:var(--ink-deep)}
+.btn-solid:hover{background:var(--gold-soft);border-color:var(--gold-soft)}
+.btn-ghost{color:var(--gold-soft)}
+.btn-ghost:hover{background:rgba(168,134,46,.12)}
+
+/* keystone arch */
+.arch-wrap{
+  align-self:end;
+  padding-bottom:0;
+  display:flex;justify-content:center;
+}
+.arch-caption{
+  position:absolute;
+  font-size:12px;letter-spacing:.3em;
+  color:rgba(242,236,221,.45);
+}
+@media(max-width:860px){
+  .hero-inner{grid-template-columns:1fr;padding-top:72px}
+  .arch-wrap{margin-top:-12px}
+}
+
+/* ---------- shared section ---------- */
+section{padding:96px 24px}
+.wrap{max-width:1080px;margin:0 auto}
+.sec-eyebrow{
+  font-size:13px;letter-spacing:.4em;
+  color:var(--gold);
+  margin-bottom:18px;
+}
+.sec-title{
+  font-size:clamp(26px,3.2vw,36px);
+  font-weight:600;
+  color:var(--ink);
+  line-height:1.5;
+  margin-bottom:22px;
+}
+.sec-lede{
+  font-size:17px;color:var(--text-soft);
+  max-width:40em;
+}
+.divider{
+  width:56px;height:2px;background:var(--gold);
+  margin:26px 0 0;
+}
+
+/* ---------- thesis ---------- */
+.thesis{background:var(--paper)}
+.thesis-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:64px;
+  margin-top:56px;
+}
+.thesis-col h3{
+  font-size:19px;font-weight:600;color:var(--ink);
+  margin-bottom:14px;
+}
+.thesis-col p{color:var(--text-soft);font-size:16.5px}
+.thesis-col .strike{
+  color:var(--text-soft);
+  opacity:.55;
+}
+@media(max-width:760px){.thesis-grid{grid-template-columns:1fr;gap:40px}}
+
+/* ---------- three forces ---------- */
+.forces{background:var(--paper-warm);border-top:1px solid var(--paper-line);border-bottom:1px solid var(--paper-line)}
+.formula{
+  margin:64px 0 56px;
+  display:flex;align-items:center;justify-content:center;
+  gap:clamp(10px,3vw,32px);
+  flex-wrap:wrap;
+}
+.force{
+  text-align:center;
+  padding:34px 26px;
+  background:var(--paper);
+  border:1px solid var(--paper-line);
+  min-width:180px;
+  flex:0 1 220px;
+  position:relative;
+}
+.force .en-label{
+  font-family:var(--serif-en);
+  font-size:13px;letter-spacing:.3em;
+  color:var(--gold);
+  margin-bottom:10px;
+}
+.force h3{font-size:24px;font-weight:600;color:var(--ink);letter-spacing:.12em}
+.force p{font-size:14.5px;color:var(--text-soft);margin-top:12px;line-height:1.8}
+.times{
+  font-family:var(--serif-en);
+  font-size:36px;color:var(--gold);
+  font-weight:400;
+}
+.forces-note{
+  text-align:center;
+  font-size:16px;color:var(--text-soft);
+  max-width:36em;margin:0 auto;
+}
+.forces-note strong{color:var(--ink);font-weight:600}
+
+/* ---------- fractal unit ---------- */
+.fractal{background:var(--paper)}
+.fractal-flow{
+  margin-top:60px;
+  display:flex;align-items:stretch;justify-content:center;
+  gap:0;flex-wrap:wrap;
+}
+.f-node{
+  flex:1 1 200px;max-width:240px;
+  padding:30px 22px;
+  text-align:center;
+  border:1px solid var(--paper-line);
+  background:var(--paper-warm);
+}
+.f-node.result{
+  background:var(--ink);
+  border-color:var(--ink);
+  color:var(--paper);
+}
+.f-node .num{
+  font-family:var(--serif-en);
+  font-size:13px;letter-spacing:.24em;
+  color:var(--gold);margin-bottom:10px;
+}
+.f-node h4{font-size:18px;font-weight:600;letter-spacing:.06em}
+.f-node p{font-size:14px;color:var(--text-soft);margin-top:10px;line-height:1.75}
+.f-node.result p{color:rgba(242,236,221,.7)}
+.f-arrow{
+  display:flex;align-items:center;
+  padding:0 14px;
+  color:var(--gold);font-size:24px;
+  font-family:var(--serif-en);
+}
+@media(max-width:820px){
+  .fractal-flow{flex-direction:column;align-items:center}
+  .f-node{max-width:340px;width:100%}
+  .f-arrow{transform:rotate(90deg);padding:8px 0}
+}
+
+/* ---------- keystone / validation ---------- */
+.keystone{
+  background:var(--ink);
+  color:var(--paper);
+}
+.keystone .sec-title{color:var(--paper)}
+.keystone .sec-lede{color:rgba(242,236,221,.72)}
+.ks-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:64px;
+  margin-top:56px;align-items:center;
+}
+.ks-points{list-style:none}
+.ks-points li{
+  padding:22px 0;
+  border-bottom:1px solid rgba(242,236,221,.14);
+  display:flex;gap:18px;align-items:baseline;
+}
+.ks-points li:first-child{border-top:1px solid rgba(242,236,221,.14)}
+.ks-points .k{
+  font-family:var(--serif-en);
+  color:var(--gold-soft);
+  font-size:14px;letter-spacing:.2em;
+  white-space:nowrap;
+}
+.ks-points p{font-size:16px;color:rgba(242,236,221,.82)}
+@media(max-width:820px){.ks-grid{grid-template-columns:1fr;gap:44px}}
+
+/* ---------- program ---------- */
+.program{background:var(--paper)}
+.program-card{
+  margin-top:56px;
+  border:1px solid var(--paper-line);
+  background:var(--paper-warm);
+  display:grid;grid-template-columns:1.2fr .8fr;
+}
+.pc-main{padding:52px 48px}
+.pc-main .tag{
+  display:inline-block;
+  font-size:12px;letter-spacing:.3em;
+  color:var(--gold);
+  border:1px solid var(--gold);
+  padding:5px 14px;
+  margin-bottom:22px;
+}
+.pc-main h3{
+  font-size:30px;font-weight:600;color:var(--ink);
+  margin-bottom:16px;letter-spacing:.04em;
+}
+.pc-main p{color:var(--text-soft);font-size:16px;max-width:32em}
+.pc-side{
+  background:var(--ink);
+  color:var(--paper);
+  padding:52px 40px;
+  display:flex;flex-direction:column;justify-content:center;gap:26px;
+}
+.pc-side .row .label{
+  font-size:12px;letter-spacing:.3em;
+  color:var(--gold-soft);margin-bottom:4px;
+}
+.pc-side .row .val{font-size:19px;font-weight:500}
+.pc-side .btn{margin-top:8px;text-align:center}
+@media(max-width:820px){.program-card{grid-template-columns:1fr}.pc-main{padding:40px 28px}.pc-side{padding:40px 28px}}
+
+/* ---------- founder ---------- */
+.founder{background:var(--paper-warm);border-top:1px solid var(--paper-line)}
+.founder-grid{
+  display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;
+  margin-top:56px;align-items:start;
+}
+.founder-name{
+  font-size:26px;font-weight:600;color:var(--ink);
+  margin-bottom:6px;
+}
+.founder-name .en{font-size:18px;color:var(--text-soft);font-weight:400;margin-left:10px}
+.founder-role{font-size:15px;color:var(--gold);letter-spacing:.14em;margin-bottom:26px}
+.cred-list{list-style:none}
+.cred-list li{
+  padding:16px 0;
+  border-bottom:1px solid var(--paper-line);
+  font-size:16px;color:var(--text-on-paper);
+  display:flex;gap:16px;align-items:baseline;
+}
+.cred-list li:first-child{border-top:1px solid var(--paper-line)}
+.cred-list .dot{color:var(--gold);font-family:var(--serif-en)}
+.founder-quote{
+  border-left:2px solid var(--gold);
+  padding-left:26px;
+  font-size:18px;
+  color:var(--ink);
+  line-height:2.05;
+}
+.founder-quote .attr{
+  display:block;margin-top:18px;
+  font-size:14px;color:var(--text-soft);letter-spacing:.1em;
+}
+@media(max-width:820px){.founder-grid{grid-template-columns:1fr;gap:40px}}
+
+/* ---------- contact / footer ---------- */
+.contact{background:var(--ink);color:var(--paper);text-align:center}
+.contact .sec-title{color:var(--paper)}
+.contact p{color:rgba(242,236,221,.72);max-width:32em;margin:0 auto 36px}
+footer{
+  background:var(--ink-deep);
+  color:rgba(242,236,221,.5);
+  text-align:center;
+  padding:34px 24px;
+  font-size:13px;letter-spacing:.12em;
+}
+footer .en{letter-spacing:.2em}
+
+/* reveal animation */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+
+.page-hero{background:var(--ink);color:var(--paper);padding:92px 24px 76px}
+.page-hero .inner{max-width:980px;margin:0 auto}
+.page-hero h1{font-size:clamp(34px,4.8vw,56px);line-height:1.4;font-weight:600}
+.page-hero p{margin-top:22px;max-width:46em;color:rgba(242,236,221,.74)}
+.content-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;margin-top:50px}
+.info-card{border:1px solid var(--paper-line);background:var(--paper-warm);padding:30px}
+.info-card h3{font-size:21px;color:var(--ink);margin-bottom:12px}
+.info-card p{font-size:16px;color:var(--text-soft)}
+.page-section{padding:84px 24px}
+.page-section.dark{background:var(--ink);color:var(--paper)}
+.page-section.dark .sec-title{color:var(--paper)}
+.page-section.dark p{color:rgba(242,236,221,.74)}
+.page-section.warm{background:var(--paper-warm);border-top:1px solid var(--paper-line);border-bottom:1px solid var(--paper-line)}
+.timeline{border-left:1px solid var(--gold);padding-left:28px;margin-top:45px}
+.timeline-item{position:relative;padding-bottom:28px}
+.timeline-item:before{content:"";position:absolute;left:-34px;top:8px;width:10px;height:10px;border-radius:50%;background:var(--gold)}
+.timeline-item small{font-family:var(--serif-en);letter-spacing:.16em;color:var(--gold)}
+.link-list{list-style:none;margin-top:24px}
+.link-list li{padding:13px 0;border-bottom:1px solid var(--paper-line)}
+.link-list a{color:var(--gold)}
+.bilingual-en{font-family:var(--serif-en);font-size:1.06em;color:var(--text-soft);margin-top:12px}
+.dark .bilingual-en{color:rgba(242,236,221,.66)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{margin-bottom:16px}.field.full{grid-column:1/-1}
+.field label{display:block;font-size:13px;letter-spacing:.08em;color:var(--text-soft);margin-bottom:5px}
+.field input,.field textarea,.field select{width:100%;padding:12px;border:1px solid var(--paper-line);background:var(--paper);font:inherit;color:var(--ink)}
+.field textarea{min-height:150px}
+@media(max-width:800px){.content-grid,.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}}
+</style></head><body>
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <span class="mark">AI <span>B</span> School</span>
+      <span class="cn">美国创新商学院</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#forces">能力框架</a>
+      <a href="validation.html">验证标准</a>
+      <a href="index.html#program">项目</a>
+      <a href="founder.html">创始人</a>
+      <a href="about.html">关于我们</a>
+      <a href="contact.html">联系我们</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero"><div class="inner">
+<div class="eyebrow">ABOUT AI B SCHOOL</div>
+<h1>我们为什么存在<br><span class="en" style="color:var(--gold-soft)">Why We Exist</span></h1>
+<p>AI B School 是一个面向 AI 时代的能力标准、训练与战略设计平台。我们关注的不是“会不会使用某个工具”，而是人在 AI 协作环境中如何继续创造价值。</p>
+<p class="bilingual-en">AI B School is a platform for capability standards, training, and strategic design in the AI era. Our central question is not whether people can use a particular tool, but how they continue to create value while working with AI.</p>
+</div></header>
+<section class="page-section"><div class="wrap">
+<div class="sec-eyebrow">OUR QUESTION · 核心问题</div>
+<h2 class="sec-title">当机器越来越聪明，人还凭什么创造价值？</h2>
+<div class="content-grid">
+<div class="info-card"><h3>我们的回答 · Our Answer</h3><p>人类的长期价值不在于与机器比计算，而在于愿景、判断、创造、责任与协作。AI 应当放大这些能力，而不是替代人的主体性。</p><p class="bilingual-en">Human value does not come from competing with machines at computation. It comes from vision, judgment, creativity, responsibility, and collaboration. AI should amplify these capabilities rather than displace human agency.</p></div>
+<div class="info-card"><h3>我们的实践 · Our Practice</h3><p>我们通过真实项目、能力档案、过程证据和独立验证，将抽象能力变成可观察、可训练、可讨论的现实成果。</p><p class="bilingual-en">Through real projects, capability dossiers, process evidence, and independent review, we turn abstract capabilities into observable, trainable, and discussable outcomes.</p></div>
+</div></div></section>
+<section class="page-section warm"><div class="wrap">
+<div class="sec-eyebrow">WHAT WE DO · 我们的工作</div><h2 class="sec-title">能力评估 · 训练 · 战略设计</h2>
+<div class="content-grid">
+<div class="info-card"><h3>Capability Assessment</h3><p>识别个人在 AI 时代的能力结构、优势、短板与发展方向。</p></div>
+<div class="info-card"><h3>Training</h3><p>通过真实任务和项目，让能力在行动、反馈和迭代中形成。</p></div>
+<div class="info-card"><h3>Strategic Design</h3><p>帮助个人、家庭和组织把 AI 工具、人的能力与长期目标连接起来。</p></div>
+<div class="info-card"><h3>Evidence-Based Practice</h3><p>以真实案例检验理论，用证据修正产品、课程与方法。</p></div>
+</div></div></section>
+<section class="page-section dark"><div class="wrap">
+<div class="sec-eyebrow" style="color:var(--gold-soft)">OUR PRINCIPLES</div><h2 class="sec-title">四条原则 · Four Principles</h2>
+<div class="content-grid">
+<div class="info-card" style="background:transparent;border-color:rgba(242,236,221,.2)"><h3 style="color:var(--paper)">Work is the credential.</h3><p>作品比形容词更可信。</p></div>
+<div class="info-card" style="background:transparent;border-color:rgba(242,236,221,.2)"><h3 style="color:var(--paper)">Agency before automation.</h3><p>先保护人的主动性，再谈自动化。</p></div>
+<div class="info-card" style="background:transparent;border-color:rgba(242,236,221,.2)"><h3 style="color:var(--paper)">Evidence before claims.</h3><p>先有证据，再做判断与传播。</p></div>
+<div class="info-card" style="background:transparent;border-color:rgba(242,236,221,.2)"><h3 style="color:var(--paper)">Practice tests theory.</h3><p>理论必须在真实项目中接受检验。</p></div>
+</div></div></section>
+
+<footer>
+  <span class="en">AI B SCHOOL · AIBSCHOOL.US</span><br>
+  能力评估 · 训练 · 战略设计 · California, USA · © 2026
+</footer>
+<script>
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script></body></html>

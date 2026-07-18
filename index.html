@@ -362,26 +362,57 @@ footer .en{letter-spacing:.2em}
   .reveal{opacity:1;transform:none;transition:none}
   html{scroll-behavior:auto}
 }
+
+.page-hero{background:var(--ink);color:var(--paper);padding:92px 24px 76px}
+.page-hero .inner{max-width:980px;margin:0 auto}
+.page-hero h1{font-size:clamp(34px,4.8vw,56px);line-height:1.4;font-weight:600}
+.page-hero p{margin-top:22px;max-width:46em;color:rgba(242,236,221,.74)}
+.content-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;margin-top:50px}
+.info-card{border:1px solid var(--paper-line);background:var(--paper-warm);padding:30px}
+.info-card h3{font-size:21px;color:var(--ink);margin-bottom:12px}
+.info-card p{font-size:16px;color:var(--text-soft)}
+.page-section{padding:84px 24px}
+.page-section.dark{background:var(--ink);color:var(--paper)}
+.page-section.dark .sec-title{color:var(--paper)}
+.page-section.dark p{color:rgba(242,236,221,.74)}
+.page-section.warm{background:var(--paper-warm);border-top:1px solid var(--paper-line);border-bottom:1px solid var(--paper-line)}
+.timeline{border-left:1px solid var(--gold);padding-left:28px;margin-top:45px}
+.timeline-item{position:relative;padding-bottom:28px}
+.timeline-item:before{content:"";position:absolute;left:-34px;top:8px;width:10px;height:10px;border-radius:50%;background:var(--gold)}
+.timeline-item small{font-family:var(--serif-en);letter-spacing:.16em;color:var(--gold)}
+.link-list{list-style:none;margin-top:24px}
+.link-list li{padding:13px 0;border-bottom:1px solid var(--paper-line)}
+.link-list a{color:var(--gold)}
+.bilingual-en{font-family:var(--serif-en);font-size:1.06em;color:var(--text-soft);margin-top:12px}
+.dark .bilingual-en{color:rgba(242,236,221,.66)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{margin-bottom:16px}.field.full{grid-column:1/-1}
+.field label{display:block;font-size:13px;letter-spacing:.08em;color:var(--text-soft);margin-bottom:5px}
+.field input,.field textarea,.field select{width:100%;padding:12px;border:1px solid var(--paper-line);background:var(--paper);font:inherit;color:var(--ink)}
+.field textarea{min-height:150px}
+@media(max-width:800px){.content-grid,.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}}
 </style>
 </head>
 <body>
 
+
 <nav>
   <div class="nav-inner">
-    <a class="brand" href="#top">
+    <a class="brand" href="index.html">
       <span class="mark">AI <span>B</span> School</span>
       <span class="cn">美国创新商学院</span>
     </a>
     <div class="nav-links">
-      <a href="#forces">三力模型</a>
-      <a href="#fractal">分形单元</a>
-      <a href="#keystone">验证标准</a>
-      <a href="#program">真项目升学营</a>
-      <a href="#founder">创始人</a>
-      <a href="#contact">联系我们</a>
+      <a href="index.html#forces">能力框架</a>
+      <a href="validation.html">验证标准</a>
+      <a href="index.html#program">项目</a>
+      <a href="founder.html">创始人</a>
+      <a href="about.html">关于我们</a>
+      <a href="contact.html">联系我们</a>
     </div>
   </div>
 </nav>
+
 
 <!-- ============ HERO ============ -->
 <header class="hero" id="top">
@@ -544,7 +575,7 @@ footer .en{letter-spacing:.2em}
         <div class="row"><div class="label">对象</div><div class="val">9 – 11 年级学生</div></div>
         <div class="row"><div class="label">规模</div><div class="val">每期仅 2 – 3 组家庭</div></div>
         <div class="row"><div class="label">形式</div><div class="val">远程 · 项目制 · 一对一密度</div></div>
-        <a class="btn btn-solid" href="#contact">预约咨询</a>
+        <a class="btn btn-solid" href="contact.html">预约咨询</a>
       </div>
     </div>
   </div>
@@ -585,7 +616,7 @@ footer .en{letter-spacing:.2em}
   </div>
 </section>
 
-<footer>
+<footer><div style="margin-bottom:10px"><a href="about.html">关于我们</a> · <a href="founder.html">创始人</a> · <a href="validation.html">验证标准</a> · <a href="contact.html">联系我们</a></div>
   <span class="en">AI B SCHOOL · AIBSCHOOL.US</span><br>
   美国创新商学院 · 加州尔湾 · © 2026
 </footer>
