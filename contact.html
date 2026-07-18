@@ -1,445 +1,132 @@
-<!DOCTYPE html>
-<html lang="zh-Hans"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact AI B School — 联系我们</title><meta name="description" content="联系 AI B School。">
+<!DOCTYPE html><html lang="zh-Hans" data-lang="zh"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Contact AI B School — 联系我们</title><meta name="description" content="联系 AI B School，咨询项目、能力评估、演讲与合作。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#21372F;
-  --ink-deep:#182a24;
-  --gold:#A8862E;
-  --gold-soft:#c2a45a;
-  --paper:#F2ECDD;
-  --paper-warm:#EAE2CE;
-  --paper-line:#d8cfb8;
-  --text-on-paper:#2b3a33;
-  --text-soft:#5c6a62;
-  --serif-cn:'Noto Serif SC', serif;
-  --serif-en:'Cormorant Garamond', serif;
+  --ink:#21372F;--ink-deep:#182a24;--gold:#A8862E;--gold-soft:#c2a45a;
+  --paper:#F2ECDD;--paper-warm:#EAE2CE;--paper-line:#d8cfb8;
+  --text:#2b3a33;--soft:#5c6a62;--serif-cn:'Noto Serif SC',serif;
+  --serif-en:'Cormorant Garamond',serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
-  font-family:var(--serif-cn);
-  background:var(--paper);
-  color:var(--text-on-paper);
-  line-height:1.9;
-  font-size:17px;
-  -webkit-font-smoothing:antialiased;
-}
-.en{font-family:var(--serif-en)}
-a{color:inherit;text-decoration:none}
-img,svg{display:block;max-width:100%}
-
-/* ---------- nav ---------- */
-nav{
-  position:sticky;top:0;z-index:50;
-  background:rgba(242,236,221,.92);
-  backdrop-filter:blur(8px);
-  border-bottom:1px solid var(--paper-line);
-}
-.nav-inner{
-  max-width:1080px;margin:0 auto;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:14px 24px;
-}
-.brand{display:flex;align-items:baseline;gap:10px}
-.brand .mark{
-  font-family:var(--serif-en);
-  font-size:20px;font-weight:600;letter-spacing:.06em;
-  color:var(--ink);
-}
-.brand .mark span{color:var(--gold)}
-.brand .cn{font-size:13px;letter-spacing:.24em;color:var(--text-soft)}
-.nav-links{display:flex;gap:28px;font-size:14px;letter-spacing:.1em}
-.nav-links a{color:var(--text-soft);transition:color .2s}
-.nav-links a:hover{color:var(--gold)}
-@media(max-width:720px){.nav-links{display:none}}
-
-/* ---------- hero ---------- */
-.hero{
-  background:var(--ink);
-  color:var(--paper);
-  overflow:hidden;
-  position:relative;
-}
-.hero-inner{
-  max-width:1080px;margin:0 auto;
-  padding:96px 24px 0;
-  display:grid;
-  grid-template-columns:1.15fr .85fr;
-  gap:48px;
-  align-items:end;
-}
-.hero .eyebrow{
-  font-size:13px;letter-spacing:.42em;
-  color:var(--gold-soft);
-  margin-bottom:28px;
-}
-.hero h1{
-  font-size:clamp(34px,4.6vw,54px);
-  font-weight:600;
-  line-height:1.42;
-  letter-spacing:.02em;
-  color:var(--paper);
-}
-.hero h1 .gold{color:var(--gold-soft)}
-.hero .sub{
-  margin-top:26px;
-  font-size:17px;
-  color:rgba(242,236,221,.72);
-  max-width:34em;
-}
-.hero .sub .en{font-size:15px;letter-spacing:.04em;font-style:italic;color:rgba(242,236,221,.5)}
-.hero-cta{
-  margin:40px 0 72px;
-  display:flex;gap:18px;flex-wrap:wrap;
-}
-.btn{
-  display:inline-block;
-  padding:13px 34px;
-  font-size:15px;letter-spacing:.18em;
-  border:1px solid var(--gold);
-  transition:all .25s;
-}
-.btn-solid{background:var(--gold);color:var(--ink-deep)}
-.btn-solid:hover{background:var(--gold-soft);border-color:var(--gold-soft)}
-.btn-ghost{color:var(--gold-soft)}
-.btn-ghost:hover{background:rgba(168,134,46,.12)}
-
-/* keystone arch */
-.arch-wrap{
-  align-self:end;
-  padding-bottom:0;
-  display:flex;justify-content:center;
-}
-.arch-caption{
-  position:absolute;
-  font-size:12px;letter-spacing:.3em;
-  color:rgba(242,236,221,.45);
-}
-@media(max-width:860px){
-  .hero-inner{grid-template-columns:1fr;padding-top:72px}
-  .arch-wrap{margin-top:-12px}
-}
-
-/* ---------- shared section ---------- */
-section{padding:96px 24px}
-.wrap{max-width:1080px;margin:0 auto}
-.sec-eyebrow{
-  font-size:13px;letter-spacing:.4em;
-  color:var(--gold);
-  margin-bottom:18px;
-}
-.sec-title{
-  font-size:clamp(26px,3.2vw,36px);
-  font-weight:600;
-  color:var(--ink);
-  line-height:1.5;
-  margin-bottom:22px;
-}
-.sec-lede{
-  font-size:17px;color:var(--text-soft);
-  max-width:40em;
-}
-.divider{
-  width:56px;height:2px;background:var(--gold);
-  margin:26px 0 0;
-}
-
-/* ---------- thesis ---------- */
-.thesis{background:var(--paper)}
-.thesis-grid{
-  display:grid;grid-template-columns:1fr 1fr;gap:64px;
-  margin-top:56px;
-}
-.thesis-col h3{
-  font-size:19px;font-weight:600;color:var(--ink);
-  margin-bottom:14px;
-}
-.thesis-col p{color:var(--text-soft);font-size:16.5px}
-.thesis-col .strike{
-  color:var(--text-soft);
-  opacity:.55;
-}
-@media(max-width:760px){.thesis-grid{grid-template-columns:1fr;gap:40px}}
-
-/* ---------- three forces ---------- */
-.forces{background:var(--paper-warm);border-top:1px solid var(--paper-line);border-bottom:1px solid var(--paper-line)}
-.formula{
-  margin:64px 0 56px;
-  display:flex;align-items:center;justify-content:center;
-  gap:clamp(10px,3vw,32px);
-  flex-wrap:wrap;
-}
-.force{
-  text-align:center;
-  padding:34px 26px;
-  background:var(--paper);
-  border:1px solid var(--paper-line);
-  min-width:180px;
-  flex:0 1 220px;
-  position:relative;
-}
-.force .en-label{
-  font-family:var(--serif-en);
-  font-size:13px;letter-spacing:.3em;
-  color:var(--gold);
-  margin-bottom:10px;
-}
-.force h3{font-size:24px;font-weight:600;color:var(--ink);letter-spacing:.12em}
-.force p{font-size:14.5px;color:var(--text-soft);margin-top:12px;line-height:1.8}
-.times{
-  font-family:var(--serif-en);
-  font-size:36px;color:var(--gold);
-  font-weight:400;
-}
-.forces-note{
-  text-align:center;
-  font-size:16px;color:var(--text-soft);
-  max-width:36em;margin:0 auto;
-}
-.forces-note strong{color:var(--ink);font-weight:600}
-
-/* ---------- fractal unit ---------- */
-.fractal{background:var(--paper)}
-.fractal-flow{
-  margin-top:60px;
-  display:flex;align-items:stretch;justify-content:center;
-  gap:0;flex-wrap:wrap;
-}
-.f-node{
-  flex:1 1 200px;max-width:240px;
-  padding:30px 22px;
-  text-align:center;
-  border:1px solid var(--paper-line);
-  background:var(--paper-warm);
-}
-.f-node.result{
-  background:var(--ink);
-  border-color:var(--ink);
-  color:var(--paper);
-}
-.f-node .num{
-  font-family:var(--serif-en);
-  font-size:13px;letter-spacing:.24em;
-  color:var(--gold);margin-bottom:10px;
-}
-.f-node h4{font-size:18px;font-weight:600;letter-spacing:.06em}
-.f-node p{font-size:14px;color:var(--text-soft);margin-top:10px;line-height:1.75}
-.f-node.result p{color:rgba(242,236,221,.7)}
-.f-arrow{
-  display:flex;align-items:center;
-  padding:0 14px;
-  color:var(--gold);font-size:24px;
-  font-family:var(--serif-en);
-}
-@media(max-width:820px){
-  .fractal-flow{flex-direction:column;align-items:center}
-  .f-node{max-width:340px;width:100%}
-  .f-arrow{transform:rotate(90deg);padding:8px 0}
-}
-
-/* ---------- keystone / validation ---------- */
-.keystone{
-  background:var(--ink);
-  color:var(--paper);
-}
-.keystone .sec-title{color:var(--paper)}
-.keystone .sec-lede{color:rgba(242,236,221,.72)}
-.ks-grid{
-  display:grid;grid-template-columns:1fr 1fr;gap:64px;
-  margin-top:56px;align-items:center;
-}
-.ks-points{list-style:none}
-.ks-points li{
-  padding:22px 0;
-  border-bottom:1px solid rgba(242,236,221,.14);
-  display:flex;gap:18px;align-items:baseline;
-}
-.ks-points li:first-child{border-top:1px solid rgba(242,236,221,.14)}
-.ks-points .k{
-  font-family:var(--serif-en);
-  color:var(--gold-soft);
-  font-size:14px;letter-spacing:.2em;
-  white-space:nowrap;
-}
-.ks-points p{font-size:16px;color:rgba(242,236,221,.82)}
-@media(max-width:820px){.ks-grid{grid-template-columns:1fr;gap:44px}}
-
-/* ---------- program ---------- */
-.program{background:var(--paper)}
-.program-card{
-  margin-top:56px;
-  border:1px solid var(--paper-line);
-  background:var(--paper-warm);
-  display:grid;grid-template-columns:1.2fr .8fr;
-}
-.pc-main{padding:52px 48px}
-.pc-main .tag{
-  display:inline-block;
-  font-size:12px;letter-spacing:.3em;
-  color:var(--gold);
-  border:1px solid var(--gold);
-  padding:5px 14px;
-  margin-bottom:22px;
-}
-.pc-main h3{
-  font-size:30px;font-weight:600;color:var(--ink);
-  margin-bottom:16px;letter-spacing:.04em;
-}
-.pc-main p{color:var(--text-soft);font-size:16px;max-width:32em}
-.pc-side{
-  background:var(--ink);
-  color:var(--paper);
-  padding:52px 40px;
-  display:flex;flex-direction:column;justify-content:center;gap:26px;
-}
-.pc-side .row .label{
-  font-size:12px;letter-spacing:.3em;
-  color:var(--gold-soft);margin-bottom:4px;
-}
-.pc-side .row .val{font-size:19px;font-weight:500}
-.pc-side .btn{margin-top:8px;text-align:center}
-@media(max-width:820px){.program-card{grid-template-columns:1fr}.pc-main{padding:40px 28px}.pc-side{padding:40px 28px}}
-
-/* ---------- founder ---------- */
-.founder{background:var(--paper-warm);border-top:1px solid var(--paper-line)}
-.founder-grid{
-  display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;
-  margin-top:56px;align-items:start;
-}
-.founder-name{
-  font-size:26px;font-weight:600;color:var(--ink);
-  margin-bottom:6px;
-}
-.founder-name .en{font-size:18px;color:var(--text-soft);font-weight:400;margin-left:10px}
-.founder-role{font-size:15px;color:var(--gold);letter-spacing:.14em;margin-bottom:26px}
-.cred-list{list-style:none}
-.cred-list li{
-  padding:16px 0;
-  border-bottom:1px solid var(--paper-line);
-  font-size:16px;color:var(--text-on-paper);
-  display:flex;gap:16px;align-items:baseline;
-}
-.cred-list li:first-child{border-top:1px solid var(--paper-line)}
-.cred-list .dot{color:var(--gold);font-family:var(--serif-en)}
-.founder-quote{
-  border-left:2px solid var(--gold);
-  padding-left:26px;
-  font-size:18px;
-  color:var(--ink);
-  line-height:2.05;
-}
-.founder-quote .attr{
-  display:block;margin-top:18px;
-  font-size:14px;color:var(--text-soft);letter-spacing:.1em;
-}
-@media(max-width:820px){.founder-grid{grid-template-columns:1fr;gap:40px}}
-
-/* ---------- contact / footer ---------- */
-.contact{background:var(--ink);color:var(--paper);text-align:center}
-.contact .sec-title{color:var(--paper)}
-.contact p{color:rgba(242,236,221,.72);max-width:32em;margin:0 auto 36px}
-footer{
-  background:var(--ink-deep);
-  color:rgba(242,236,221,.5);
-  text-align:center;
-  padding:34px 24px;
-  font-size:13px;letter-spacing:.12em;
-}
-footer .en{letter-spacing:.2em}
-
-/* reveal animation */
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){
-  .reveal{opacity:1;transform:none;transition:none}
-  html{scroll-behavior:auto}
-}
-
-.page-hero{background:var(--ink);color:var(--paper);padding:92px 24px 76px}
-.page-hero .inner{max-width:980px;margin:0 auto}
-.page-hero h1{font-size:clamp(34px,4.8vw,56px);line-height:1.4;font-weight:600}
-.page-hero p{margin-top:22px;max-width:46em;color:rgba(242,236,221,.74)}
-.content-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;margin-top:50px}
-.info-card{border:1px solid var(--paper-line);background:var(--paper-warm);padding:30px}
-.info-card h3{font-size:21px;color:var(--ink);margin-bottom:12px}
-.info-card p{font-size:16px;color:var(--text-soft)}
-.page-section{padding:84px 24px}
-.page-section.dark{background:var(--ink);color:var(--paper)}
-.page-section.dark .sec-title{color:var(--paper)}
-.page-section.dark p{color:rgba(242,236,221,.74)}
-.page-section.warm{background:var(--paper-warm);border-top:1px solid var(--paper-line);border-bottom:1px solid var(--paper-line)}
-.timeline{border-left:1px solid var(--gold);padding-left:28px;margin-top:45px}
-.timeline-item{position:relative;padding-bottom:28px}
-.timeline-item:before{content:"";position:absolute;left:-34px;top:8px;width:10px;height:10px;border-radius:50%;background:var(--gold)}
-.timeline-item small{font-family:var(--serif-en);letter-spacing:.16em;color:var(--gold)}
-.link-list{list-style:none;margin-top:24px}
-.link-list li{padding:13px 0;border-bottom:1px solid var(--paper-line)}
-.link-list a{color:var(--gold)}
-.bilingual-en{font-family:var(--serif-en);font-size:1.06em;color:var(--text-soft);margin-top:12px}
-.dark .bilingual-en{color:rgba(242,236,221,.66)}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.field{margin-bottom:16px}.field.full{grid-column:1/-1}
-.field label{display:block;font-size:13px;letter-spacing:.08em;color:var(--text-soft);margin-bottom:5px}
-.field input,.field textarea,.field select{width:100%;padding:12px;border:1px solid var(--paper-line);background:var(--paper);font:inherit;color:var(--ink)}
-.field textarea{min-height:150px}
-@media(max-width:800px){.content-grid,.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}}
-</style></head><body>
-<nav>
-  <div class="nav-inner">
-    <a class="brand" href="index.html">
-      <span class="mark">AI <span>B</span> School</span>
-      <span class="cn">美国创新商学院</span>
-    </a>
-    <div class="nav-links">
-      <a href="index.html#forces">能力框架</a>
-      <a href="validation.html">验证标准</a>
-      <a href="index.html#program">项目</a>
-      <a href="founder.html">创始人</a>
-      <a href="about.html">关于我们</a>
-      <a href="contact.html">联系我们</a>
-    </div>
-  </div>
-</nav>
-
-<header class="page-hero"><div class="inner">
-<div class="eyebrow">CONTACT AI B SCHOOL</div><h1>从一次坦率的对话开始</h1>
-<p>我们欢迎关于 AI 时代能力发展、真实项目教育、家庭决策、演讲、研究与合作的认真交流。</p>
-<p class="bilingual-en">We welcome thoughtful conversations about AI-era capability development, real-project education, family decision-making, speaking, research, and partnership.</p>
-</div></header>
-<section class="page-section"><div class="wrap">
-<div class="content-grid">
-<div>
-<div class="sec-eyebrow">WAYS TO CONNECT</div><h2 class="sec-title">您可以就这些事项联系我们</h2>
-<ul class="link-list">
-<li>真项目升学营与学生项目</li><li>AI 时代能力评估与训练</li><li>家长、专业人士与创业者的战略咨询</li><li>演讲、媒体采访与研究合作</li><li>教育机构与社区合作</li>
-</ul>
-<p style="margin-top:28px">Email: <a style="color:var(--gold)" href="mailto:jwang1127@gmail.com">jwang1127@gmail.com</a></p>
-<p>Website: <a style="color:var(--gold)" href="https://aibschool.us">aibschool.us</a></p>
-<p>Location: California, USA</p>
-</div>
-<div class="info-card"><h3>发送咨询 · Send an Inquiry</h3>
-<form action="mailto:jwang1127@gmail.com" method="post" enctype="text/plain">
-<div class="form-grid">
-<div class="field"><label>姓名 / Name</label><input name="name" required></div>
+body{font-family:var(--serif-cn);background:var(--paper);color:var(--text);line-height:1.9;font-size:17px;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none} img,svg{display:block;max-width:100%}
+.lang-en{display:none}
+html[data-lang="en"] .lang-zh{display:none!important}
+html[data-lang="en"] .lang-en{display:block!important}
+html[data-lang="en"] span.lang-en,html[data-lang="en"] a.lang-en{display:inline!important}
+nav{position:sticky;top:0;z-index:50;background:rgba(242,236,221,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--paper-line)}
+.nav-inner{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:13px 22px;gap:18px}
+.brand{display:flex;align-items:baseline;gap:10px;white-space:nowrap}
+.brand .mark{font-family:var(--serif-en);font-size:20px;font-weight:600;letter-spacing:.06em;color:var(--ink)}
+.brand .mark span{color:var(--gold)} .brand .cn{font-size:12px;letter-spacing:.18em;color:var(--soft)}
+.nav-links{display:flex;align-items:center;gap:18px;font-size:13px;letter-spacing:.06em}
+.nav-links a{color:var(--soft)} .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+.lang-toggle{border:1px solid var(--paper-line);background:transparent;color:var(--ink);padding:6px 10px;cursor:pointer;font:inherit;font-size:12px;letter-spacing:.08em}
+.menu-btn{display:none;border:0;background:transparent;font-size:24px;color:var(--ink);cursor:pointer}
+.mobile-menu{display:none;padding:14px 24px 20px;border-top:1px solid var(--paper-line)}
+.mobile-menu a{display:block;padding:8px 0;color:var(--soft)}
+.mobile-menu .lang-toggle{margin-top:10px}
+@media(max-width:980px){.nav-links{display:none}.menu-btn{display:block}.mobile-menu.open{display:block}}
+.hero{background:var(--ink);color:var(--paper);overflow:hidden}
+.hero-inner{max-width:1080px;margin:auto;padding:96px 24px 0;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:end}
+.eyebrow,.sec-eyebrow{font-size:13px;letter-spacing:.38em;color:var(--gold);margin-bottom:18px}
+.hero .eyebrow{color:var(--gold-soft);margin-bottom:28px}
+.hero h1,.page-hero h1{font-size:clamp(34px,4.6vw,56px);font-weight:600;line-height:1.42;letter-spacing:.02em}
+.hero h1{color:var(--paper)} .gold{color:var(--gold-soft)}
+.hero .sub{margin-top:26px;font-size:17px;color:rgba(242,236,221,.74);max-width:36em}
+.hero-cta{margin:40px 0 72px;display:flex;gap:18px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 30px;font-size:14px;letter-spacing:.14em;border:1px solid var(--gold);transition:.25s;text-align:center}
+.btn-solid{background:var(--gold);color:var(--ink-deep)} .btn-solid:hover{background:var(--gold-soft);border-color:var(--gold-soft)}
+.btn-ghost{color:var(--gold-soft)} .btn-ghost:hover{background:rgba(168,134,46,.12)}
+.arch-wrap{align-self:end;display:flex;justify-content:center}
+@media(max-width:860px){.hero-inner{grid-template-columns:1fr;padding-top:72px}.arch-wrap{margin-top:-8px}}
+section{padding:92px 24px}.wrap{max-width:1080px;margin:auto}
+.paper{background:var(--paper)} .warm{background:var(--paper-warm);border-top:1px solid var(--paper-line);border-bottom:1px solid var(--paper-line)}
+.ink{background:var(--ink);color:var(--paper)} .ink .sec-title{color:var(--paper)} .ink .sec-lede{color:rgba(242,236,221,.72)}
+.sec-title{font-size:clamp(27px,3.2vw,38px);font-weight:600;color:var(--ink);line-height:1.5;margin-bottom:20px}
+.sec-lede{font-size:17px;color:var(--soft);max-width:44em}.divider{width:56px;height:2px;background:var(--gold);margin-top:26px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:50px}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:50px}
+.card{background:var(--paper);border:1px solid var(--paper-line);padding:30px}.card h3{font-size:21px;color:var(--ink);margin-bottom:12px}.card p{font-size:15.5px;color:var(--soft)}
+.dark-card{background:rgba(255,255,255,.03);border-color:rgba(242,236,221,.16)}.dark-card h3{color:var(--paper)}.dark-card p{color:rgba(242,236,221,.72)}
+@media(max-width:800px){.grid-2,.grid-3{grid-template-columns:1fr}}
+.formula{margin:60px 0 52px;display:flex;align-items:center;justify-content:center;gap:22px;flex-wrap:wrap}
+.force{padding:32px 24px;background:var(--paper);border:1px solid var(--paper-line);min-width:190px;flex:0 1 225px;text-align:center}
+.force .en-label{font-family:var(--serif-en);font-size:13px;letter-spacing:.3em;color:var(--gold);margin-bottom:10px}
+.force h3{font-size:24px;color:var(--ink);letter-spacing:.1em}.force p{font-size:14.5px;color:var(--soft);margin-top:12px;line-height:1.8}
+.times{font-family:var(--serif-en);font-size:34px;color:var(--gold)}
+.flow{margin-top:56px;display:flex;align-items:stretch;justify-content:center;gap:0;flex-wrap:wrap}
+.node{flex:1 1 210px;max-width:245px;padding:28px 20px;text-align:center;border:1px solid var(--paper-line);background:var(--paper-warm)}
+.node.result{background:var(--ink);border-color:var(--ink);color:var(--paper)}.node .num{font-family:var(--serif-en);font-size:13px;letter-spacing:.22em;color:var(--gold);margin-bottom:8px}
+.node h4{font-size:18px}.node p{font-size:14px;color:var(--soft);margin-top:10px;line-height:1.75}.node.result p{color:rgba(242,236,221,.72)}
+.arrow{display:flex;align-items:center;padding:0 12px;color:var(--gold);font-size:23px}
+@media(max-width:820px){.flow{flex-direction:column;align-items:center}.node{max-width:350px;width:100%}.arrow{transform:rotate(90deg);padding:8px 0}}
+.program-card{margin-top:52px;border:1px solid var(--paper-line);background:var(--paper-warm);display:grid;grid-template-columns:1.2fr .8fr}
+.pc-main{padding:48px}.pc-side{background:var(--ink);color:var(--paper);padding:48px 38px;display:flex;flex-direction:column;justify-content:center;gap:24px}
+.pc-main .tag{display:inline-block;font-size:12px;letter-spacing:.26em;color:var(--gold);border:1px solid var(--gold);padding:5px 12px;margin-bottom:20px}
+.pc-main h3{font-size:29px;color:var(--ink);margin-bottom:14px}.pc-main p{color:var(--soft)}.pc-side .label{font-size:12px;letter-spacing:.26em;color:var(--gold-soft)}.pc-side .val{font-size:18px}
+@media(max-width:820px){.program-card{grid-template-columns:1fr}.pc-main,.pc-side{padding:36px 26px}}
+.page-hero{background:var(--ink);color:var(--paper);padding:92px 24px 76px}.page-hero .inner{max-width:950px;margin:auto}.page-hero .lede{max-width:45em;margin-top:22px;color:rgba(242,236,221,.74)}
+.quote{border-left:2px solid var(--gold);padding-left:24px;font-size:19px;color:var(--ink);line-height:2}.ink .quote{color:var(--paper)}
+.profile-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:58px;align-items:start;margin-top:48px}@media(max-width:820px){.profile-grid{grid-template-columns:1fr}}
+.cred-list{list-style:none}.cred-list li{padding:14px 0;border-bottom:1px solid var(--paper-line);display:flex;gap:14px}.cred-list li:first-child{border-top:1px solid var(--paper-line)}.dot{color:var(--gold)}
+.timeline{margin-top:45px;border-left:1px solid var(--gold);padding-left:28px}.timeline-item{position:relative;padding-bottom:30px}.timeline-item:before{content:"";position:absolute;left:-34px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--gold)}
+.timeline-item .year{font-family:var(--serif-en);font-size:14px;letter-spacing:.15em;color:var(--gold)}.timeline-item h3{font-size:19px;color:var(--ink);margin:4px 0}
+.contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;margin-top:48px}@media(max-width:800px){.contact-grid{grid-template-columns:1fr}}
+.contact-list{list-style:none}.contact-list li{padding:14px 0;border-bottom:1px solid var(--paper-line)}.contact-list a{color:var(--gold)}
+.contact-form{background:var(--paper-warm);border:1px solid var(--paper-line);padding:30px}.field{margin-bottom:18px}.field label{display:block;font-size:13px;letter-spacing:.08em;color:var(--soft);margin-bottom:6px}
+.field input,.field textarea,.field select{width:100%;padding:12px;border:1px solid var(--paper-line);background:var(--paper);font:inherit;color:var(--ink)}.field textarea{min-height:140px;resize:vertical}
+.note{font-size:13px;color:var(--soft);margin-top:12px}
+footer{background:var(--ink-deep);color:rgba(242,236,221,.56);padding:38px 24px}.footer-inner{max-width:1080px;margin:auto;display:grid;grid-template-columns:1fr auto;gap:30px}
+.footer-brand{font-family:var(--serif-en);letter-spacing:.15em;color:var(--paper)}.footer-links{display:flex;gap:18px;flex-wrap:wrap;font-size:13px}.footer-small{margin-top:10px;font-size:12px}
+@media(max-width:720px){.footer-inner{grid-template-columns:1fr}}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style></head><body><nav><div class="nav-inner">
+<a class="brand" href="index.html"><span class="mark">AI <span>B</span> School</span><span class="cn lang-zh">美国创新商学院</span><span class="cn lang-en">American Innovation Business School</span></a>
+<div class="nav-links"><a class="" href="index.html"><span class="lang-zh">首页</span><span class="lang-en">Home</span></a><a class="" href="index.html#forces"><span class="lang-zh">能力框架</span><span class="lang-en">Framework</span></a><a class="" href="validation.html"><span class="lang-zh">验证标准</span><span class="lang-en">Validation</span></a><a class="" href="index.html#program"><span class="lang-zh">项目</span><span class="lang-en">Programs</span></a><a class="" href="founder.html"><span class="lang-zh">创始人</span><span class="lang-en">Founder</span></a><a class="" href="about.html"><span class="lang-zh">关于我们</span><span class="lang-en">About</span></a><a class="active" href="contact.html"><span class="lang-zh">联系我们</span><span class="lang-en">Contact</span></a><button class="lang-toggle" type="button">EN</button></div>
+<button class="menu-btn" type="button" aria-label="Menu">☰</button>
+</div><div class="mobile-menu"><a class="" href="index.html"><span class="lang-zh">首页</span><span class="lang-en">Home</span></a><a class="" href="index.html#forces"><span class="lang-zh">能力框架</span><span class="lang-en">Framework</span></a><a class="" href="validation.html"><span class="lang-zh">验证标准</span><span class="lang-en">Validation</span></a><a class="" href="index.html#program"><span class="lang-zh">项目</span><span class="lang-en">Programs</span></a><a class="" href="founder.html"><span class="lang-zh">创始人</span><span class="lang-en">Founder</span></a><a class="" href="about.html"><span class="lang-zh">关于我们</span><span class="lang-en">About</span></a><a class="active" href="contact.html"><span class="lang-zh">联系我们</span><span class="lang-en">Contact</span></a><button class="lang-toggle" type="button">EN</button></div></nav>
+<header class="page-hero"><div class="inner"><div class="eyebrow">CONTACT AI B SCHOOL</div>
+<h1 class="lang-zh">从一次坦率的对话开始</h1><h1 class="lang-en">Begin with a candid conversation</h1>
+<p class="lede lang-zh">我们欢迎关于 AI 时代能力发展、真实项目教育、家庭决策、演讲、研究与合作的认真交流。</p><p class="lede lang-en">We welcome thoughtful conversations about AI-era capability development, real-project education, family decision-making, speaking, research, and partnership.</p></div></header>
+<section class="paper"><div class="wrap"><div class="contact-grid"><div><div class="sec-eyebrow">WAYS TO CONNECT</div><h2 class="sec-title lang-zh">您可以就这些事项联系我们</h2><h2 class="sec-title lang-en">You may contact us regarding</h2>
+<ul class="contact-list"><li><span class="lang-zh">真项目升学营与学生项目</span><span class="lang-en">Real Project Admissions Program and student projects</span></li><li><span class="lang-zh">AI 时代能力评估与训练</span><span class="lang-en">AI-era capability assessment and training</span></li><li><span class="lang-zh">家长、专业人士与创业者的战略咨询</span><span class="lang-en">Strategic consultation for parents, professionals, and entrepreneurs</span></li><li><span class="lang-zh">演讲、媒体采访与研究合作</span><span class="lang-en">Speaking, media interviews, and research collaboration</span></li><li><span class="lang-zh">教育机构与社区合作</span><span class="lang-en">Partnerships with educational and community organizations</span></li></ul>
+<div style="margin-top:30px"><p>Email: <a href="mailto:jwang1127@gmail.com">jwang1127@gmail.com</a></p><p>Website: <a href="https://aibschool.us">aibschool.us</a></p><p>Location: California, USA</p></div></div>
+<div class="contact-form"><h3 class="lang-zh">发送咨询</h3><h3 class="lang-en">Send an Inquiry</h3><form action="mailto:jwang1127@gmail.com" method="post" enctype="text/plain">
+<div class="field"><label class="lang-zh">姓名</label><label class="lang-en">Name</label><input name="name" required></div>
 <div class="field"><label>Email</label><input type="email" name="email" required></div>
-<div class="field full"><label>主题 / Topic</label><select name="topic"><option>Real Project Program / 真项目升学营</option><option>Capability Assessment / 能力评估</option><option>Speaking or Partnership / 演讲或合作</option><option>Other / 其他</option></select></div>
-<div class="field full"><label>信息 / Message</label><textarea name="message" required></textarea></div>
-</div><button class="btn btn-solid" type="submit">发送 / Send</button>
-<p style="font-size:13px;color:var(--text-soft);margin-top:12px">当前表单调用默认邮件客户端。正式部署后可接入 Formspree 或 Google Forms。</p>
-</form></div>
-</div></div></section>
-
-<footer>
-  <span class="en">AI B SCHOOL · AIBSCHOOL.US</span><br>
-  能力评估 · 训练 · 战略设计 · California, USA · © 2026
-</footer>
+<div class="field"><label class="lang-zh">咨询主题</label><label class="lang-en">Topic</label><select name="topic"><option>Real Project Program / 真项目升学营</option><option>Capability Assessment / 能力评估</option><option>Speaking or Partnership / 演讲或合作</option><option>Other / 其他</option></select></div>
+<div class="field"><label class="lang-zh">您的问题</label><label class="lang-en">Your Message</label><textarea name="message" required></textarea></div>
+<button class="btn btn-solid" type="submit"><span class="lang-zh">发送</span><span class="lang-en">Send</span></button>
+<p class="note lang-zh">当前表单会调用您的默认邮件客户端。</p><p class="note lang-en">This form opens your default email client.</p></form></div></div></div></section>
+<footer><div class="footer-inner"><div><div class="footer-brand">AI B SCHOOL · AIBSCHOOL.US</div>
+<div class="footer-small lang-zh">能力评估 · 训练 · 战略设计 · California, USA · © 2026</div>
+<div class="footer-small lang-en">Capability Assessment · Training · Strategic Design · California, USA · © 2026</div></div>
+<div class="footer-links"><a href="about.html"><span class="lang-zh">关于</span><span class="lang-en">About</span></a><a href="founder.html"><span class="lang-zh">创始人</span><span class="lang-en">Founder</span></a><a href="validation.html"><span class="lang-zh">验证</span><span class="lang-en">Validation</span></a><a href="contact.html"><span class="lang-zh">联系</span><span class="lang-en">Contact</span></a></div></div></footer>
 <script>
-const io = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
-},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-</script></body></html>
+(function(){
+  const root=document.documentElement;
+  const saved=localStorage.getItem('aibschool-lang')||'zh';
+  root.dataset.lang=saved;
+  root.lang=saved==='zh'?'zh-Hans':'en';
+  function sync(){
+    document.querySelectorAll('.lang-toggle').forEach(b=>b.textContent=root.dataset.lang==='zh'?'EN':'中文');
+  }
+  sync();
+  document.querySelectorAll('.lang-toggle').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const next=root.dataset.lang==='zh'?'en':'zh';
+      root.dataset.lang=next;root.lang=next==='zh'?'zh-Hans':'en';
+      localStorage.setItem('aibschool-lang',next);sync();
+    });
+  });
+  const mb=document.querySelector('.menu-btn'), mm=document.querySelector('.mobile-menu');
+  if(mb&&mm)mb.addEventListener('click',()=>mm.classList.toggle('open'));
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+})();
+</script>
+</body></html>
